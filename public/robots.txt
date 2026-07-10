@@ -1,4 +1,11 @@
-User-agent: *
-Allow: /
+import { MetadataRoute } from "next";
 
-Sitemap: https://www.drimrankabir.com/sitemap.xml
+export default function robots(): MetadataRoute.Robots {
+  return {
+    rules: {
+      userAgent: "*",
+      disallow: "/prescription",
+    },
+    sitemap: "https://drshafiulahmedkawsar.vercel.app/sitemap.xml",
+  };
+}
