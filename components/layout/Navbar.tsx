@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X, CalendarCheck } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
@@ -42,9 +43,11 @@ export function Navbar() {
         <Link href="/" className="flex min-w-0 items-center gap-2.5">
           {/* Added shrink-0 so the circle avatar NEVER gets pushed off screen */}
           <span className="flex h-9 w-9 shrink-0 items-center justify-center overflow-hidden rounded-full bg-sapphire-600 font-display text-sm font-semibold text-white">
-            <img
+            <Image
               src="/doctor/doctor-logo.jpg"
               alt="Dr. Shafiul Kawsar"
+              width={36}
+              height={36}
               className="h-full w-full object-cover"
             />
           </span>
@@ -77,10 +80,10 @@ export function Navbar() {
         <div className="hidden items-center gap-3 lg:flex">
           <ThemeToggle />
           <Button asChild size="default">
-            <a href="/#appointment">
+            <Link href="/#appointment">
               <CalendarCheck className="mr-2 h-4 w-4" />
               Book Appointment
-            </a>
+            </Link>
           </Button>
         </div>
 
@@ -124,10 +127,10 @@ export function Navbar() {
                 </Link>
               ))}
               <Button asChild size="lg" className="mt-3 w-full justify-center">
-                <a href="/#appointment" onClick={() => setOpen(false)}>
+                <Link href="/#appointment" onClick={() => setOpen(false)}>
                   <CalendarCheck className="mr-2 h-4 w-4" />
                   Book Appointment
-                </a>
+                </Link>
               </Button>
             </nav>
           </motion.div>

@@ -147,7 +147,7 @@ export function DownloadPDF({ targetRef }: { targetRef: RefObject<HTMLDivElement
       const imgHeight = (canvas.height * usableWidth) / canvas.width;
 
       let heightLeft = imgHeight;
-      let position = margin;
+      const position = margin;
 
       // ১ম পেজ ডাটা ইমেজ যোগ করা
       pdf.addImage(imgData, "PNG", margin, position, usableWidth, imgHeight);

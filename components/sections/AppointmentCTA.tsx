@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { CalendarCheck, MessageCircle, Phone } from "lucide-react";
 import { doctor } from "@/lib/doctor";
 import { Button } from "@/components/ui/button";
@@ -68,10 +69,10 @@ export function AppointmentCTA() {
             </a>
           </Button>
           <Button asChild size="lg" variant="ghost" className="text-white hover:bg-white/10">
-            <a href="/#contact">
+            <Link href="/#contact">
               <CalendarCheck className="h-[18px] w-[18px]" />
               See Contact Details
-            </a>
+            </Link>
           </Button>
         </motion.div>
       </Container>

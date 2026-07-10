@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { CalendarCheck, MessageCircle, Phone, ShieldCheck, Award, Users } from "lucide-react";
 import { doctor } from "@/lib/doctor";
@@ -46,10 +47,10 @@ export function Hero() {
 
           <div className="flex flex-wrap items-center gap-3 pt-2">
             <Button asChild size="lg">
-              <a href="/#appointment">
+              <Link href="/#appointment">
                 <CalendarCheck className="h-[18px] w-[18px]" />
                 Book Appointment
-              </a>
+              </Link>
             </Button>
             <Button asChild size="lg" variant="whatsapp">
               <a href={waLink} target="_blank" rel="noopener noreferrer">
